@@ -1,1 +1,8 @@
- <h1>Home Page</h1>
+<div class='room-nav'>
+      <center><h1>Bloc Chat</h1></center>
+      <div ng-repeat="room in home.rooms">
+          <ul class="chatrooms">
+            <li> {{ room.$value }} </li>
+          </ul>
+      </div>
+</div>
