@@ -3,6 +3,8 @@
         this.rooms = Room.all;
         console.log(this.rooms)
 
+        $scope.currentRoomId = ""
+
         this.open = function () {
           $uibModal.open({
               templateUrl: 'templates/modal.html',
@@ -11,6 +13,8 @@
           });
         };
 
+        // click function that sets current room based on the id of the room
+        // make a Message.js that handles message functionality(SERVICE)
     }
 
     angular

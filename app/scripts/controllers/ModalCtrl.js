@@ -6,10 +6,10 @@
         };
 
 
-        this.submit = function () {
+        this.createRoom = function () {
 
             Room.add(this.newRoom);
-            this.newRoom = '';
+            // later auto-go to new room (normal or global scope)
             $uibModalInstance.close();
         };
 
