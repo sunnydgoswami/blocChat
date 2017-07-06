@@ -1,25 +1,38 @@
-
-<div id="masthead">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-7">
-        <h1>Bloc Chat
-          <p class="lead">The easiest way to chat!</p>
-        </h1>
-      </div>
-    </div><!-- /cont -->
+<section class="header-container">
+  <div id="masthead">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1>Bloc Chat
+            <p class="lead">The easiest way to chat!</p>
+          </h1>
+        </div>
+      </div><!-- /cont -->
+    </div>
   </div>
-</div>
+</section>
 
-<div class="sidebar" id="sidebar">
-    <center>
-      <div class="sidebar-header">
-        <button type="button" class="new-room btn btn-info" ng-click="home.open()">New Room</button>
+<section class="sbar-container">
+  <div class="col-xs-6 col-md-4" id="sidebar">
+    <div class="ui left fixed vertical menu">
+      <div class="item">
+          <!-- <img class="ui mini image" src="/images/logo.png"> -->
+          <center><button type="button" class="btn btn-info" id="new-room" ng-click="home.openNewRoom()">New Room</button></center>
       </div>
-    </center>
-    <center>
-      <div class="sidebar-body" ng-repeat="room in home.rooms">
-          <p class="room-name" ng-click="home.storeRoomName(room)">{{ room.$value || room.name }}</p>
+      <div ng-repeat="room in home.rooms">
+          <button class="btn btn-basic" id="room-name" ng-click="home.storeRoomName(room)">{{ room.name }}</button>
       </div>
-    </center>
-</div>
+    </div>
+  </div>
+</section>
+
+<section class="content-container">
+  <div class="col-xs-12 col-md-8" id="chat-room-container">
+      <h1>{{ home.currentRoom.name }}</h1>
+      <div class="messages" ng-repeat="message in home.messages">
+          <div class="username">{{ message.username }}</div>
+          <div class="timestamp">{{ message.sentAt }}</div>
+          <div class="user-message">{{ message.content }}</div>
+      </div>
+  </div>
+</section>

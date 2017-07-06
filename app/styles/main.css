@@ -1,6 +1,7 @@
 html {
   font-family: 'Zilla Slab', serif;
   background-color: gainsboro;
+  min-width: 400px;
 }
 
 #masthead {
@@ -21,16 +22,25 @@ html {
 
 #sidebar {
   position: absolute;
+  display: inline-block;
   width: 25%;
   height: 100%;
   background-color: darkGrey;
   padding-top: 10px;
 }
 
-.room-name {
+#new-room {
+  margin-bottom: 10px;
+}
+
+#room-name {
+  margin-bottom: 2px;
+}
+
+#chat-room-container {
+  float: right;
+  padding-left: 0px;
   padding-top: 10px;
-  color: black;
-  font-weight: 200;
 }
 
 @media screen and (min-width: 768px) {
@@ -42,6 +52,15 @@ html {
 .affix-top,.affix{
 	position: static;
 }
+
+  #sidebar {
+    min-width: 150px;
+  }
+
+  #chat-room-container {
+    float: right;
+    width: auto;
+  }
 
 @media (min-width: 979px) {
   #sidebar.affix-top {
