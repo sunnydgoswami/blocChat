@@ -7,7 +7,7 @@
             <p class="lead">The easiest way to chat!</p>
           </h1>
         </div>
-      </div><!-- /cont -->
+      </div>
     </div>
   </div>
 </section>
@@ -20,7 +20,7 @@
           <center><button type="button" class="btn btn-info" id="new-room" ng-click="home.openNewRoom()">New Room</button></center>
       </div>
       <div ng-repeat="room in home.rooms">
-          <button class="btn btn-basic" id="room-name" ng-click="home.storeRoomName(room)">{{ room.name }}</button>
+          <a class="btn btn-basic" id="room-name" ng-click="home.storeRoomName(room)">{{ room.name }}</a>
       </div>
     </div>
   </div>
