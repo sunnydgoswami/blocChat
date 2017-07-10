@@ -1,14 +1,11 @@
-<div>
+<section class="modal-box">
   <h2 class="modal-title">What's your name?</h2>
-  <div class="modal-body">
-    <p>Enter a username</p>
-    <form ng-submit="modal.ok()">
-      <div class="input-group">
-        <input type="text" class="form-control input-lg" ng-model="username.username" title="username" autofocus>
-      </div>
-    </form>
+    <div class="modal-body">
+        <h5 class="modal-prompt">Enter a username</h5>
+            <input type="text" name="input" ng-model="username.username" required>
+    </div>
   </div>
-  <div>
-    <button class="btn btn-block modal-btn-create" type="button" ng-click="username.setUsername()" ng-disabled="username.username === undefined || username.username === ''">Set username</button>
+  <div class="modal-footer">
+    <button class="btn btn-block" type="button" ng-click="username.setUsername()" ng-disabled="username.username === undefined || username.username === '' || username.username === null">Set username</button>
   </div>
-</div>
+</section>

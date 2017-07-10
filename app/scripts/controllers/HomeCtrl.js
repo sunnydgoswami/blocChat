@@ -1,7 +1,6 @@
 (function() {
-    function HomeCtrl(Room, Message, $uibModal, $coodies) {
+    function HomeCtrl(Room, Message, $uibModal, $cookies) {
         this.rooms = Room.all;
-        console.log(this.rooms)
         this.currentRoom = null;
 
 
@@ -16,8 +15,7 @@
 
         this.storeRoomName = function (room) {
             this.currentRoom = room;
-            this.messages = Message.getByRoomId(this.currentRoom.$id)
-            console.log(this.messages)
+            this.messages = Message.getByRoomId(this.currentRoom.$id);
         }
 
         // click function that sets current room based on the id of the room
