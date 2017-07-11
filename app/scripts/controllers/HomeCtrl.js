@@ -19,6 +19,11 @@
             this.messages = Message.getByRoomId(this.currentRoom.$id);
         }
 
+        this.sendMessage = function () {
+          Message.send(this.newMessage, this.currentRoom);
+          this.newMessage = "";
+        };
+
         // click function that sets current room based on the id of the room
         // make a Message.js that handles message functionality(SERVICE)
     }

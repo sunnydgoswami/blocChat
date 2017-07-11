@@ -7,18 +7,15 @@
 html {
   height: 100%;
   font-size: 100%;
+  font-family: 'Zilla Slab', serif;
+  background-color: gainsboro;
+  min-width: 100%;
 }
 
 body {
   font-family: sans-serif;
   color: #4a4a4a;
-  height: 100%;
-}
-
-html {
-  font-family: 'Zilla Slab', serif;
-  background-color: gainsboro;
-  min-width: 400px;
+  height: auto;
 }
 
 #masthead {
@@ -39,8 +36,9 @@ html {
 
 #sidebar {
   position: absolute;
+  float: left;
   display: inline-block;
-  width: 25%;
+  width: 115px;
   height: 100%;
   background-color: darkGrey;
   padding-top: 10px;
@@ -55,30 +53,51 @@ html {
 }
 
 #chat-room-container {
-  float: right;
-  padding-left: 0px;
-  padding-top: 10px;
+  max-height: 500px;
+  width: 85%;
+  margin-left: 135px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  overflow-y: scroll;
 }
+
+
+#messages {
+  padding: 100px 35px 100px 0;
+}
+
+
+.message-username {
+  font-weight: bold;
+  padding-right: 15px;
+}
+
+.message-time {
+  font-size: x-small;
+  color: #979797;
+}
+
+.message-content {
+  float: right;
+}
+#new-message {
+  position: fixed;
+  bottom: 0;
+  padding: 35px 35px 35px 0;
+}
+
 
 @media screen and (min-width: 768px) {
 	#masthead h1 {
 		font-size: 100px;
 	}
-}
+
 
 .affix-top,.affix{
 	position: static;
 }
 
-  #sidebar {
-    min-width: 150px;
-  }
-
-  #chat-room-container {
-    float: right;
-    width: auto;
-  }
-
+}
 @media (min-width: 979px) {
   #sidebar.affix-top {
     position: static;
@@ -95,4 +114,5 @@ html {
     top:70px;
     width:228px;
   }
+
 }
