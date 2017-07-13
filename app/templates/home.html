@@ -32,7 +32,7 @@
       <h1>{{ home.currentRoom.name }}</h1>
       <div id="messages" ng-repeat="message in home.messages">
         <p><span class="message-username">{{ message.username }}</span> <span class="message-time">{{ message.sentAt }}</span></p>
-      <p class="message-content">{{ message.content }}</p>
+        <p class="message-content">{{ message.content }}</p>
       </div>
 
       <div id="new-message" ng-show="home.currentRoom !== null">
